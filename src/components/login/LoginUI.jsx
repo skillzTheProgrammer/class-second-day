@@ -4,7 +4,9 @@ import { database } from '../../database/database';
 import { ViewOnLog } from '../../globals';
 
 class LoginUI extends Login {
+
     render() {
+        ViewOnLog(this.state);
         ViewOnLog(database)
         const stylesheet ={
             form:{
@@ -26,10 +28,10 @@ class LoginUI extends Login {
             <div>
                 <h1>Login</h1>
                 <form style={stylesheet.form} >
-                    <label>Email</label><input   /> <br />
-                    <label>password</label><input  /> <br />
+                    <label>Email</label><input onChange = {this.handleInputChange( 'email')} /> <br />
+                    <label>password</label><input onChange= { this.handleInputChange( 'password')} /> <br />
                     <p id="error" style={stylesheet.error}> </p>
-                    <button style={stylesheet.button} onClick={this.handleSignUp}>Sign Up</button>
+                    <button style={stylesheet.button} onClick={this.handleSignIn} >Sign in</button>
                 </form>
             </div>
         );

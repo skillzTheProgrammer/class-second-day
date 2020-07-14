@@ -15,12 +15,13 @@ class App extends Component{
     return(
       <div className="App">
         <h1>BookShop App</h1>
+        {/* <DashboardUi /> */}
         <Router>
           <Switch>
-          <Route path={REGISTER} component={RegisterMyUi} />
+          <Route path={REGISTER} exact component={RegisterMyUi} />
           <Route path={LOGIN} exact component={LoginUI} />
-          <Route path={DASHBOARD} component={DashboardUi} />
-          <Route component={Failure} />
+          <Route path={DASHBOARD}  component={DashboardUi} />
+          {/* <Route exact component={Failure} /> */}
           </Switch>
         </Router>
         {/* <Router>
