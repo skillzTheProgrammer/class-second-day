@@ -1,0 +1,1 @@
+export const ViewOnLog = console.log

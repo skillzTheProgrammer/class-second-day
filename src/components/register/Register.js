@@ -38,8 +38,9 @@ class Register extends Component {
                 .catch(err=>console.log(err)) 
 
         }else{
-            errMessage.textContent = "Please Fill in Missing Fields"
             setTimeout(emptyError,4000)
+            errMessage.textContent = "Please Fill in Missing Fields"
+            
         }
         console.log(isEmpty)
         console.log(this.state)

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Register from './Register';
+import { ViewOnLog } from '../../globals';
 
 class RegisterMyUi extends Register {
     render() {
         const stylesheet ={
             form:{
-                width: 150,
+                width: 210,
                 marginLeft: 20
             },
             button:{
@@ -19,11 +20,11 @@ class RegisterMyUi extends Register {
                 color:"red",
             }
         }
-        console.log(this.state)
+        ViewOnLog(this.state)
         return (
-            <div style={stylesheet.form}>
+            <div >
                 <h1>Register</h1>
-                <form >
+                <form style={stylesheet.form} >
                     <label>First Name</label><input  onChange={this.updateChange("firstName")} /> <br />
                     <label>Last Name</label><input onChange={this.updateChange("lastName")} /> <br />
                     <label>Email</label><input onChange={this.updateChange("email")}  /> <br />
